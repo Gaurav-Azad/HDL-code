@@ -1,0 +1,15 @@
+CHIP Xnor{
+	IN a, b;
+      OUT out;
+	
+	 PARTS:
+    // Put your code here:
+	Not(in = a,out = temp);
+	And(b = b,a = temp,out = tem);
+	Not(in = b,out= t);
+	And(a = a,b = t,out = te);
+	Or(a = tem	,b = te,out = axorb);
+	Not(in = axorb,out = out);
+	
+}
+	
